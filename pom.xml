@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+    http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>1.0.0</modelVersion>
+    <parent>
+        <groupId>com.github</groupId>
+        <artifactId>parent</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <groupId>com.github.niorpc</groupId>
+    <artifactId>niorpc</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>NIO Rpc</name>
+    <description>使用nio 实现RPC</description>
+    <url>http://maven.apache.org</url>
+    <inceptionYear>2016</inceptionYear>
+
+    <properties>
+        <project.build.sourceEncoding>GBK</project.build.sourceEncoding>
+    </properties>
+
+
+    <modules>
+        <module>niorpc-client</module>
+        <module>niorpc-server</module>
+    </modules>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>apache.snapshots</id>
+            <url>http://repository.apache.org/snapshots/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <scm>
+        <connection>scm:git:git://github.com/igithu/niorpc</connection>
+    </scm>
+
+    <pluginManagement>
+        <plugins>
+        </plugins>
+    </pluginManagement>
+
+    <dependencyManagement>
+        <dependencies>
+        </dependencies>
+    </dependencyManagement>
+    <!-- Dependencies needed by subprojects -->
+    <dependencies>
+    </dependencies>
+
+    <profiles>
+    </profiles>
+
+    <reporting>
+        <plugins>
+        </plugins>
+    </reporting>
+
+    <distributionManagement>
+    </distributionManagement>
+
+
+</project>
