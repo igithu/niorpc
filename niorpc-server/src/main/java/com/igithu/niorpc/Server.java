@@ -25,6 +25,8 @@ public class Server {
     private int threadPoolSize;
 
     public void Start() {
+        ServerRpcConnectionFactory rpcConnectionFactory = SocketRpcConnectionFactories.createServerRpcConnectionFactory(port);
+        RpcServer server = new RpcServer(rpcConnectionFactory, Executors.newFixedThreadPool(threadPoolSize), true);
     }
 
     public static void main(String[] args) {
