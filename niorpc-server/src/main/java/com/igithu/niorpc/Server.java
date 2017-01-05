@@ -9,29 +9,40 @@
 /**
  * @file Server.java
  * @author aishuyu(asy5178@163.com)
- * @date 2017/01/01 23:35:27
+ * @date 2017/01/05 20:45:35
  * @brief
  *
  **/
 
 
-import java.util.concurrent.Executors;
-import com.googlecode.protobuf.socketrpc.RpcServer;
-import com.googlecode.protobuf.socketrpc.ServerRpcConnectionFactory;
-import com.googlecode.protobuf.socketrpc.SocketRpcConnectionFactories;
-
-public class Server {
-    private int port;
-    private int threadPoolSize;
-
-    public void Start() {
-        ServerRpcConnectionFactory rpcConnectionFactory = SocketRpcConnectionFactories.createServerRpcConnectionFactory(port);
-        RpcServer server = new RpcServer(rpcConnectionFactory, Executors.newFixedThreadPool(threadPoolSize), true);
-    }
-
-    public static void main(String[] args) {
-    }
+public interface Server {
+    /**
+     *
+     */
+    public void start();
+    /**
+     *
+     */
+    public void stop();
+    /**
+     *
+     */
+    public void register(Class interfaceDefiner,Class impl);
+    /**
+     *
+     */
+    public void call(Invocation invo);
+    /**
+     *
+     */
+    public boolean isRunning();
+    /**
+     *
+     */
+    public int getPort();
 }
+
+
 
 
 
