@@ -1,21 +1,10 @@
-/***************************************************************************
- *
- * Copyright (c) 2017 aishuyu, Inc. All Rights Reserved
- *
- **************************************************************************/
+package com.igithu.niorpc;
 
-
+import java.net.ServerSocket;
 
 /**
- * @file Listener.java
- * @author aishuyu(asy5178@163.com)
- * @date 2017/01/05 21:23:54
- * @brief
- *
- **/
-
-
-
+ * Created by alisen on 17/1/8.
+ */
 public class Listener extends Thread {
     private ServerSocket socket;
     private Server server;
@@ -23,16 +12,5 @@ public class Listener extends Thread {
     public Listener(Server server) {
         this.server = server;
     }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-/* vim: set expandtab ts=4 sw=4 sts=4 tw=100: */
