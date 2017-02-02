@@ -8,7 +8,15 @@ import com.igithu.niorpc.Server;
  */
 public class RpcServer implements Server {
 
+    private int port = 8889;
+    private Listener listener;
+    private boolean isRuning = true;
+
+
     public void start() {
+        listener = new Listener(this);
+        this.isRuning = true;
+        listener.start();
 
     }
 
@@ -25,11 +33,11 @@ public class RpcServer implements Server {
     }
 
     public boolean isRunning() {
-        return false;
+        return isRuning;
     }
 
     public int getPort() {
-        return 0;
+        return port;
     }
 }
 
