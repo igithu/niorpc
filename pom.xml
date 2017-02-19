@@ -81,6 +81,16 @@
                 <version>${project.version}</version>
             </dependency>
             <dependency>
+                <artifactId>niorpc-common</artifactId>
+                <groupId>com.igithu.niorpc</groupId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <artifactId>niorpc-protocol</artifactId>
+                <groupId>com.igithu.niorpc</groupId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>
                 <version>${log4j.version}</version>
