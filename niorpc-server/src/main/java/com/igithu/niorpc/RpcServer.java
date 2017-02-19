@@ -1,8 +1,5 @@
 package com.igithu.niorpc;
 
-import com.igithu.niorpc.Invocation;
-import com.igithu.niorpc.Server;
-
 /**
  * Created by alisen on 17/1/8.
  */
@@ -21,7 +18,7 @@ public class RpcServer implements Server {
     }
 
     public void stop() {
-
+        setRuning(false);
     }
 
     public void register(Class interfaceDefiner, Class impl) {
@@ -38,6 +35,10 @@ public class RpcServer implements Server {
 
     public int getPort() {
         return port;
+    }
+
+    public void setRuning(boolean isRuning) {
+        this.isRuning = isRuning;
     }
 }
 
